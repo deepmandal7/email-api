@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "3dcfa71a-3133-43b4-9ecd-2c28e5c70ec1",
+		"name": "E-Mail API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email_body\": \"This is a test email body\",\n    \"email_scheduled_at\": \"2022-04-10T04:58:00\",\n    \"email_recepient\": \"deepmandal8747@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Failed Emails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/email/failed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"email",
+						"failed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Emails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Email By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/email?_id=625211c41a2197e32b32a907",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "_id",
+							"value": "625211c41a2197e32b32a907"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Email",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/email/:_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"email",
+						":_id"
+					],
+					"variable": [
+						{
+							"key": "_id",
+							"value": "625211c41a2197e32b32a907"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Email",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email_body\": \"This is an updated test email body\",\n    \"email_scheduled_at\": \"2022-04-10T04:47:00\",\n    \"email_recepient\": \"deepmandal8747@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/email/:_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"email",
+						":_id"
+					],
+					"variable": [
+						{
+							"key": "_id",
+							"value": "6252123ef03e7147b769d5a8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
