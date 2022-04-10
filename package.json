@@ -1,0 +1,30 @@
+{
+  "name": "email-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --trace-warnings src/index.js",
+    "start": "node src/index.js",
+    "test": "NODE_ENV=test jest"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.2",
+    "agenda": "^4.2.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "find-config": "^1.0.0",
+    "helmet": "^5.0.2",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "nodemon": "^2.0.15"
+  }
+}
